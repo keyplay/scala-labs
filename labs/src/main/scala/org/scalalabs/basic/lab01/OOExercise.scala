@@ -1,5 +1,4 @@
 package org.scalalabs.basic.lab01
-import scala.language.implicitConversions
 /**
  * The goal of this exercise is to get familiar basic OO constructs in scala
  *
@@ -44,6 +43,39 @@ import scala.language.implicitConversions
  * For Exercise 4 and 5 you will need different versions of the conversion method.
  * It's okay if you can pass only either 4 or 5 at a time.
  */
-class Euro {
+class Euro(val euro: Int, val cents: Int = 0) extends Currency("EUR") with Ordered[Euro] {
+  val inCents = euro * 100 + cents
+
+  def +(that: Euro): Euro = Euro.fromCents(this.inCents + that.inCents)
+  def *(factor: Int): Euro = Euro.fromCents(inCents * factor)
+  def /(divider: Int): Euro = {
+    if (divider > 0) Euro.fromCents(this.inCents / divider)
+    else throw new IllegalArgumentException
+  }
+
+  def compare(that: Euro) = this.inCents - that.inCents
+
+  override def toString: String = symbol + ": " + euro + ',' + (if (cents == 0) "--" else f"$cents%02d")
+
+}
+
+object Euro {
+  def fromCents(cents: Int): Euro = {
+    new Euro(cents / 100, cents % 100)
+  }
+
+  implicit class EuroMaker(factor: Int) {
+    def *(euro: Euro): Euro = Euro.fromCents(factor * euro.inCents)
+  }
+
+  //  implicit def Dollar2Euro(dollar: Dollar): Euro = Euro.fromCents(DefaultCurrencyConverter.toEuroCents(dollar.inCents))  // for Exercise 4
+  implicit def Dollar2Euro(dollar: Dollar)(implicit converter: CurrencyConverter): Euro = Euro.fromCents(converter.toEuroCents(dollar.inCents)) // for Exercise 5
+}
+
+class Dollar(val dollar: Int, val cents: Int) extends Currency("USD") {
+  val inCents = dollar * 100 + cents
+}
+
+abstract class Currency(val symbol: String) {
 
 }
