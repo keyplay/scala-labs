@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <inceptionYear>2010</inceptionYear>
     <properties>
-        <scala.version>2.8.1</scala.version>
+        <scala.version>2.13.2</scala.version>
         <!-- Common plugin settings -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
