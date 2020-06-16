@@ -50,7 +50,7 @@ class Euro(val euro: Int, val cents: Int = 0) extends Currency("EUR") with Order
   def *(factor: Int): Euro = Euro.fromCents(inCents * factor)
   def /(divider: Int): Euro = {
     if (divider > 0) Euro.fromCents(this.inCents / divider)
-    else throw new IllegalArgumentException
+    else throw new IllegalArgumentException("divider can not be zero！")
   }
 
   def compare(that: Euro) = this.inCents - that.inCents

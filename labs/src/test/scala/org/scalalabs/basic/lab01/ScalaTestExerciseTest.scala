@@ -16,13 +16,26 @@ import org.scalatestplus.junit.JUnitRunner
  * - Alternative flow (divider is <= 0)
  */
 //@RunWith(classOf[JUnitRunner])
-class ScalaTestExerciseTest extends Matchers {
-  "Exercise: Euro with divider method" should {
-    "divide correctly when divider is > 0" in {
-      val res = new Euro(2, 4) / 2
+class ScalaTestExerciseTest extends AnyFunSpecLike {
+  describe("Exercise: Euro with divider method") {
+    describe("when divider is > 0") {
+      it("should divide correctly") {
+        val res = new Euro(2, 4) / 2
+        assert(res.euro === 1)
+        assert(res.cents === 2)
+      }
+    }
 
-      res.euro === 1
-      res.cents === 2
+    describe("when divider is == 0") {
+      it("should throw an IllegalArgumentException") {
+        assertThrows[IllegalArgumentException] { new Euro(2, 4) / 0 }
+      }
+    }
+
+    describe("when divider is < 0") {
+      it("should throw an IllegalArgumentException") {
+        assertThrows[IllegalArgumentException] { new Euro(2, 4) / -1 }
+      }
     }
   }
 }
