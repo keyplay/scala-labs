@@ -76,6 +76,4 @@ class Dollar(val dollar: Int, val cents: Int) extends Currency("USD") {
   val inCents = dollar * 100 + cents
 }
 
-abstract class Currency(val symbol: String) {
-
-}
+abstract class Currency(val symbol: String)

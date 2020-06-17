@@ -50,7 +50,6 @@ class ListManipulationExercise02Test extends Specification {
       val jason = Person(21, "Jason", "Jasonsson")
 
       val result = separateTheMenFromTheBoys(List(jason, anton1, anton2, anton3, peter1, peter2))
-
       List(List("Anton1", "Anton2", "Peter1"), List("Anton3", "Peter2", "Jason")) === result
     }
   }

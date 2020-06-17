@@ -14,7 +14,7 @@ import CollectionExercise02.Person
 class CollectionExerciseTest extends Specification {
 
   "CollectionExercise01: GoogleCodeJam" should {
-    "get first Element in list" in {
+    "translate correctly" in {
       val in1 = "ejp mysljylc kd kxveddknmc re jsicpdrysi"
       val in2 = "rbcpc ypc rtcsra dkh wyfrepkym veddknkmkrkcd"
       val in3 = "de kr kd eoya kw aej tysr re ujdr lkgc jv"
