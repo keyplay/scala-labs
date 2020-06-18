@@ -4,6 +4,7 @@ import java.io.{ IOException, InputStream }
 
 import scala.io.Source
 import scala.util.control._
+import scala.util.{ Success, Try }
 import sys._
 
 object OptionExercise {
@@ -26,7 +27,8 @@ object OptionExercise {
    * - does not exist: 					"not existing"
    */
   def roomState(rooms: Map[Int, Option[String]], room: Int): String = {
-    error("Fix me")
+    rooms.getOrElse(room, Some("not existing")).map(value =>
+      if (value == "locked") "not available" else value).getOrElse("empty")
   }
 
 }
@@ -47,8 +49,13 @@ object EitherExercise {
    * - Left("foo") -> Left(NumberFormatException)
    *
    */
-  def reciprocal(input: Either[String, Int]): Either[Throwable, Int] = {
-    error("Fix me")
+  def reciprocal(input: Either[String, Int]): Either[Throwable, Double] = {
+    input.fold(
+      str =>
+        Exception.catching(classOf[NumberFormatException]).either(str.toInt), // try parse to an int
+      i => Right(i))
+      .filterOrElse(i => i != 0, new IllegalArgumentException("Reciprocal of 0 does not exist!"))
+      .map(1.0 / _)
   }
 
 }
@@ -61,18 +68,29 @@ object TryExercise {
    *
    * Hint: You can make use {@code Try}'s convenience methods such as recover, flatMap, transform, foreach etc.
    */
+  //  def print(inputStream: InputStream): Unit = {
+  //    val readResult = try {
+  //      Source.fromInputStream(inputStream).mkString
+  //    } catch {
+  //      case e: IOException => "Couldn't read input stream!"
+  //    }
+  //    val result = try {
+  //      inputStream.close()
+  //      readResult
+  //    } catch {
+  //      case throwable: Throwable => s"Error: Failed to close! $readResult"
+  //    }
+  //    println(result)
+  //  }
+
   def print(inputStream: InputStream): Unit = {
-    val readResult = try {
-      Source.fromInputStream(inputStream).mkString
-    } catch {
+    Try(Source.fromInputStream(inputStream).mkString).recover {
       case e: IOException => "Couldn't read input stream!"
+    }.flatMap {
+      str => Try(inputStream.close()).transform(_ => Success(str), _ => Success(s"Error: Failed to close! $str"))
+    }.foreach {
+      println(_)
     }
-    val result = try {
-      inputStream.close()
-      readResult
-    } catch {
-      case throwable: Throwable => s"Error: Failed to close! $readResult"
-    }
-    println(result)
+
   }
 }

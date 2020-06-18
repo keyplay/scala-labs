@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87f4299c-37e2-4157-a41b-441b70c22ae6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_12_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/OOExercise.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/OOExercise.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/ListManipulationExercise02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/ListManipulationExercise02.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/CollectionExerciseTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/CollectionExerciseTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/ListManipulationExercise02Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/ListManipulationExercise02Test.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FlowControlExercise.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FlowControlExercise.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab03/FlowControlExerciseTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab03/FlowControlExerciseTest.scala" afterDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="scala-labs.iws" />
@@ -64,22 +58,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab03/FlowControlExerciseTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+            <state relative-caret-position="-977">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="e#35#123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/CollectionExerciseTest.scala">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FlowControlExercise.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+            <state relative-caret-position="366">
+              <caret line="89" column="100" selection-start-line="89" selection-start-column="100" selection-end-line="89" selection-end-column="100" />
               <folding>
-                <element signature="e#35#87#0" expanded="true" />
+                <element signature="e#35#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,6 +106,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/ListManipulationExercise02Test.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/CollectionExerciseTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab03/FlowControlExerciseTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FlowControlExercise.scala" />
       </list>
     </option>
   </component>
@@ -170,51 +169,6 @@
               <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lab02" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="scala" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -253,7 +207,7 @@
               <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lab02" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lab03" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -304,7 +258,7 @@
               <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lab02" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lab03" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -321,7 +275,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592405577643" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592499036786" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
@@ -557,7 +511,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" order="0" sideWeight="0.6016016" visible="true" weight="0.24040511" />
+      <window_info active="true" id="Project" order="0" sideWeight="0.6016016" visible="true" weight="0.24040511" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -575,7 +529,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Changes" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32832834" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30119178" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30119178" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -736,9 +690,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab02/CollectionExerciseTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="952">
           <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
           <folding>
             <element signature="e#35#87#0" expanded="true" />
@@ -746,10 +707,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab02/CollectionExercise.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/PatternMatchingExercise.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FunctionsExercise.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/ForExpressionExercise.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab03/FlowControlExerciseTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-977">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#35#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/FlowControlExercise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="89" column="100" selection-start-line="89" selection-start-column="100" selection-end-line="89" selection-end-column="100" />
+          <folding>
+            <element signature="e#35#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

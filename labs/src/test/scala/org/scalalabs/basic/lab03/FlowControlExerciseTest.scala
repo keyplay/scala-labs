@@ -49,6 +49,7 @@ class FlowControlExerciseTest extends Specification with EitherMatchers with Moc
 
     "correctly encapsulate error on inputting 0 value" in {
       reciprocal(Right(0)).left.map(_.getMessage) must beLeft("Reciprocal of 0 does not exist!")
+      reciprocal(Left("0")).left.map(_.getMessage) must beLeft("Reciprocal of 0 does not exist!")
     }
 
     "correctly calculate reciprocal of unparseable string" in {
