@@ -68,6 +68,7 @@ object TryExercise {
    *
    * Hint: You can make use {@code Try}'s convenience methods such as recover, flatMap, transform, foreach etc.
    */
+
   //  def print(inputStream: InputStream): Unit = {
   //    val readResult = try {
   //      Source.fromInputStream(inputStream).mkString
@@ -88,9 +89,6 @@ object TryExercise {
       case e: IOException => "Couldn't read input stream!"
     }.flatMap {
       str => Try(inputStream.close()).transform(_ => Success(str), _ => Success(s"Error: Failed to close! $str"))
-    }.foreach {
-      println(_)
-    }
-
+    }.foreach(println)
   }
 }
