@@ -13,7 +13,6 @@ import PatternMatchingExercise02._
 class PatternMatchingExerciseTest extends Specification {
 
   "PatternMatchingExercise01" should {
-
     "match on input type" in {
       "A string with length 8" === matchOnInputType("A String")
       "A positive integer" === matchOnInputType(10)

@@ -32,7 +32,16 @@ object PatternMatchingExercise01 {
   case class Person(name: String, age: Int)
 
   def matchOnInputType(in: Any) = {
-    error("fix me")
+    in match {
+      case str: String => "A string with length " + str.length
+      case int: Int => if (int > 0) "A positive integer"
+      case Person(name, _) => "A person with name: " + name
+      case seq: Seq[_] => if (seq.length > 10) "Seq with more than 10 elements" else s"first: ${seq(0)}, second: ${seq(1)}, rest: ${seq.takeRight(seq.length - 2)}"
+      case Some(_) => "A Scala Option subtype"
+      case None => "A Scala Option subtype"
+      case null => "A null value"
+      case _ => "Some Scala class"
+    }
   }
 
 }
@@ -54,7 +63,10 @@ object PatternMatchingExercise02 {
     private var transformationCount: Map[Class[_], Int] = Map().withDefaultValue(0)
 
     def process(message: Any): Any = {
-      error("fix me")
+      if (transform.isDefinedAt(message)) {
+        updateCount(message)
+        transform(message)
+      } else message
     }
 
     private def updateCount(message: Any) = {
