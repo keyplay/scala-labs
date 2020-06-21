@@ -21,8 +21,13 @@ import sys._
  */
 object FunctionsExercise01 {
 
-  def doWithText( /* provide correct function signature */ ): String = {
-    error("fix me")
+  def doWithText(f: String => String): String = {
+    val scanner = new Scanner(getClass.getResourceAsStream("/text.txt"))
+    try {
+      scanner.useDelimiter("\\Z");
+      val content = scanner.next()
+      f(content)
+    } finally scanner.close()
   }
 
   def reverseText(): String = {
@@ -59,8 +64,12 @@ object FunctionsExercise02 {
 
   private def logPerf(elapsed: Long) = printed = s"The execution took: $elapsed ms"
 
-  def measure[T]( /* provide correct method parameter */ ): T = {
-    error("fix me")
+  def measure[T](f: => T): T = {
+    val start = System.nanoTime() / 1000 / 1000
+    val ret = f
+    val end = System.nanoTime() / 1000 / 1000
+    logPerf(end - start)
+    ret
   }
 
 }
@@ -75,7 +84,7 @@ object FunctionsExercise03 {
 
   def plusOne(x: Int): Int = {
     //implement this by using the plus method with a partially applied construct
-    error("fix me")
+    plus(x, 1)
   }
 
   def plus(x: Int, y: Int): Int = {
