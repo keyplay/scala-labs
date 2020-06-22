@@ -33,12 +33,12 @@ object PatternMatchingExercise01 {
 
   def matchOnInputType(in: Any) = {
     in match {
-      case str: String => "A string with length " + str.length
-      case int: Int => if (int > 0) "A positive integer"
-      case Person(name, _) => "A person with name: " + name
-      case seq: Seq[_] => if (seq.length > 10) "Seq with more than 10 elements" else s"first: ${seq(0)}, second: ${seq(1)}, rest: ${seq.takeRight(seq.length - 2)}"
-      case Some(_) => "A Scala Option subtype"
-      case None => "A Scala Option subtype"
+      case str: String => s"A string with length ${str.length}"
+      case int: Int if (int > 0) => "A positive integer"
+      case Person(name, _) => s"A person with name: $name"
+      case seq: Seq[_] if (seq.length > 10) => "Seq with more than 10 elements"
+      case head :: second :: tail => s"first: $head, second: $second, rest: $tail"
+      case _: Option[_] => "A Scala Option subtype"
       case null => "A null value"
       case _ => "Some Scala class"
     }
@@ -62,11 +62,18 @@ object PatternMatchingExercise02 {
 
     private var transformationCount: Map[Class[_], Int] = Map().withDefaultValue(0)
 
+    //    def process(message: Any): Any = {
+    //      if (transform.isDefinedAt(message)) {
+    //        updateCount(message)
+    //        transform(message)
+    //      } else message
+    //    }
+
     def process(message: Any): Any = {
-      if (transform.isDefinedAt(message)) {
+      transform.andThen(res => {
         updateCount(message)
-        transform(message)
-      } else message
+        res
+      }).applyOrElse(message, (_: Any) => message)
     }
 
     private def updateCount(message: Any) = {

@@ -29,7 +29,10 @@ object RecursionPatternMatchingExercise {
    * checkValuesIncrease(Seq(1,2,2)) == false
    */
   def checkValuesIncrease(seq: Seq[Int]): Boolean = {
-    error("fix me")
+    seq match {
+      case head :: second :: tail => (head < second) && checkValuesIncrease(second :: tail)
+      case _ => true
+    }
   }
 
   /**
@@ -37,7 +40,12 @@ object RecursionPatternMatchingExercise {
    * List(1,1,2,3,1,1) -> List(1,1), List(2), List(3), List(1,1)
    */
   def groupConsecutive[T](in: List[T]): List[List[T]] = {
-    error("fix me")
+    in match {
+      case Nil => Nil
+      case head :: _ =>
+        val (first, rest) = in.span(_ == head)
+        first :: groupConsecutive(rest)
+    }
   }
 
   /**
@@ -45,7 +53,12 @@ object RecursionPatternMatchingExercise {
    * List(1,1,2,3,1,1) -> List(1,1,1,1), List(2), List(3)
    */
   def groupEquals[T](in: List[T]): List[List[T]] = {
-    error("fix me")
+    in match {
+      case Nil => Nil
+      case head :: _ =>
+        val (first, rest) = in.partition(_ == head)
+        first :: groupEquals(rest)
+    }
   }
 
   /**
@@ -53,7 +66,12 @@ object RecursionPatternMatchingExercise {
    * List(1,1,2,3,1,1) -> List(1,2,3)
    */
   def compress[T](in: List[T]): List[T] = {
-    error("fix me")
+    in match {
+      case Nil => Nil
+      case head :: _ =>
+        val (first, rest) = in.partition(_ == head)
+        first.head :: compress(rest)
+    }
   }
 
   /**
@@ -61,7 +79,7 @@ object RecursionPatternMatchingExercise {
    * List(1,1,2,3,1,1) -> List((4,1),(1,2),(1,3))
    */
   def amountEqualMembers[T](in: List[T]): List[(Int, T)] = {
-    error("fix me")
+    groupEquals(in).map((l: List[T]) => (l.size, l.head))
   }
 
   /**
@@ -69,7 +87,28 @@ object RecursionPatternMatchingExercise {
    * List(List(1,2,3), List('A, 'B, 'C), List('a, 'b, 'c)) -> List(List(1, 'A, 'a), List(2, 'B, 'b), List(3, 'C, 'c))
    */
   def zipMultiple(in: List[List[_]]): List[List[_]] = {
-    error("fix me")
+    def zipHelper(l: List[List[_]]): List[List[_]] = {
+      l match {
+        case Nil :: _ => Nil
+        case _ => mergeFirstElement(l) :: zipHelper(removeFirstElement(l))
+      }
+    }
+
+    def mergeFirstElement(l: List[List[_]]): List[_] = {
+      l match {
+        case Nil => Nil
+        case xs :: tail => xs.head :: mergeFirstElement(tail)
+      }
+    }
+
+    def removeFirstElement(l: List[List[_]]): List[List[_]] = {
+      l match {
+        case Nil => Nil
+        case xs :: tail => xs.tail :: removeFirstElement(tail)
+      }
+    }
+
+    zipHelper(in)
   }
 
   /**
@@ -77,7 +116,12 @@ object RecursionPatternMatchingExercise {
    * List(List(1), List('A, 'B, 'C), List('a, 'b)) -> List(List(1, 'A, 'a))
    */
   def zipMultipleWithDifferentSize(in: List[List[_]]): List[List[_]] = {
-    error("fix me")
+    val minLength = in.map(_.length).min
+    def dropRestElement(l: List[List[_]], len: Int): List[List[_]] = {
+      l.map(_.take(len))
+    }
+
+    zipMultiple(dropRestElement(in, minLength))
   }
 
 }
