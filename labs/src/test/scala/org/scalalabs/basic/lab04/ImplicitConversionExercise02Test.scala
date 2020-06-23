@@ -17,17 +17,17 @@ class ImplicitConversionExercise02Test extends Specification {
 
   "Exercise01" should {
     "have a working money DSL" in {
-      skipped("Uncomment and fix me")
-      //            Euro(2, 0) must be_==~(2 euros)
-      //            Euro(0, 25) must be_==~(25 cents)
-      //            Euro(2, 25) must be_==~(2 euros 25 cents)
+      //      skipped("Uncomment and fix me")
+      Euro(2, 0) must be_==~(2 euros)
+      Euro(0, 25) must be_==~(25 cents)
+      Euro(2, 25) must be_==~(2 euros 25 cents)
     }
   }
   "Exercise02" should {
     "make Euro orderable without implementing the Ordered trait" in {
-      skipped("Uncomment and fix me")
-      //      val raw = Seq(Euro(2, 0), Euro(1, 1), Euro(1, 5))
-      //      raw.sorted ==== Seq(Euro(1, 1), Euro(1, 5), Euro(2, 0))
+      //      skipped("Uncomment and fix me")
+      val raw = Seq(Euro(2, 0), Euro(1, 1), Euro(1, 5))
+      raw.sorted ==== Seq(Euro(1, 1), Euro(1, 5), Euro(2, 0))
     }
   }
   "Exercise03" should {

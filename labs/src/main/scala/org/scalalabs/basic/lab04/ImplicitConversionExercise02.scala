@@ -14,6 +14,12 @@ case class Euro(val euros: Int, val cents: Int) {
 
 object Euro {
   def fromCents(cents: Int) = new Euro(cents / 100, cents % 100)
+
+  import Exercise03._
+  implicit object EuroConverter extends JsonConverter[Euro] {
+    override def toJSON(e: Euro): JValue = EuroJsonMarshallerHelper.marshal(e)
+    override def fromJson(json: JValue): Euro = EuroJsonMarshallerHelper.unmarshal(json)
+  }
 }
 
 /**
@@ -30,7 +36,14 @@ object Euro {
  * 2 euros >45< cents
  */
 object Exercise01 {
+  class EuroBuilder(val amount: Int, val inCents: Int = 0) {
+    def euros = new EuroBuilder(0, inCents + amount * 100)
+    def cents = new EuroBuilder(0, inCents + amount)
+    def apply(amount: Int) = new EuroBuilder(amount, inCents)
+  }
 
+  implicit def fromIntToEuroBuilder(value: Int) = new EuroBuilder(value)
+  implicit def fromEuroBuilderToEuro(b: EuroBuilder) = Euro.fromCents(b.inCents)
 }
 
 /**
@@ -39,7 +52,9 @@ object Exercise01 {
  * so that the call to Seq(Euro(1,5), Euro(3,2)).sorted compiles.
  */
 object Exercise02 {
-
+  implicit object EuroOrdering extends Ordering[Euro] {
+    def compare(a: Euro, b: Euro) = a.inCents - b.inCents
+  }
 }
 
 /**
@@ -53,11 +68,11 @@ object Exercise02 {
  */
 object Exercise03 {
   object JsonConverter {
-    def convertToJson[T /**provide context bound*/ ](t: T): JValue = {
-      ???
+    def convertToJson[T: JsonConverter](t: T): JValue = {
+      implicitly[JsonConverter[T]].toJSON(t)
     }
-    def parseFromJson[T /**provide context bound*/ ](json: JValue): T = {
-      ???
+    def parseFromJson[T: JsonConverter](json: JValue): T = {
+      implicitly[JsonConverter[T]].fromJson(json)
     }
   }
 

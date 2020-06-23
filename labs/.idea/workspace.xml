@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87f4299c-37e2-4157-a41b-441b70c22ae6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01Test.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02Test.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala" afterDir="false" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="scala-labs.iws" />
@@ -59,10 +62,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+            <state relative-caret-position="380">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+              <folding>
+                <element signature="e#34#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="e#35#78#0" expanded="true" />
               </folding>
@@ -71,19 +95,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01Test.scala">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02Test.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+            <state relative-caret-position="544">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+              <folding>
+                <element signature="e#34#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/OOExercise.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="408">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
+              <folding>
+                <element signature="e#35#78#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +153,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab03/RecursionPatternMatchingExercise.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01Test.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/CurrencyConverter.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02Test.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala" />
       </list>
     </option>
   </component>
@@ -138,7 +173,7 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1378" />
@@ -284,6 +319,17 @@
               <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lab01" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="labs" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="labs" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scala" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scalalabs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="basic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="lab04" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -301,7 +347,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592886066426" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592927281918" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
@@ -534,7 +580,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" order="0" sideWeight="0.6016016" visible="true" weight="0.21162046" />
@@ -555,7 +601,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Changes" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32832834" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22643554" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17551462" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -637,16 +683,6 @@
           <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#35#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab01/OOExerciseTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="e#35#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -805,49 +841,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab01/OOExerciseTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/CurrencyConverter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/OOExercise.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        <state relative-caret-position="-884">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#35#87#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01Test.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="593">
           <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/OOExercise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="71" column="80" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+          <folding>
+            <element signature="e#34#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise02.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="e#35#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/scalalabs/basic/lab04/TraitExerciseTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding>
+            <element signature="e#34#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab01/CurrencyConverter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/ImplicitConversionExercise01.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+        <state relative-caret-position="408">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="e#35#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/scalalabs/basic/lab04/TraitExercise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
         </state>
       </provider>
     </entry>

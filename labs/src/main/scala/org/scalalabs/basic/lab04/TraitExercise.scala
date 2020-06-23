@@ -48,7 +48,14 @@ object SimpleLogger {
   def apply(clazz: String) = new SimpleLogger(clazz)
 }
 
-class DummyService {
+trait Loggable {
+  self =>
+  private lazy val logger = SimpleLogger(getClass().getName())
+  def debug = logger debug _
+  def info = logger info _
+}
+
+class DummyService extends Loggable {
 
   /**
    * the logger must be removed.
@@ -56,12 +63,18 @@ class DummyService {
    * Finally, mix-in the Loggable trait in this class in order to log the statments
    * in the sendSomething method
    */
-  val logger = SimpleLogger(getClass().getName())
+  //  val logger = SimpleLogger(getClass().getName())
+  //
+  //  def sendSomething(msg: Any) = {
+  //    logger.debug("Prepare sending")
+  //    logger.info(s"$msg successfully sent")
+  //    logger.debug("Done")
+  //  }
 
   def sendSomething(msg: Any) = {
-    logger.debug("Prepare sending")
-    logger.info(s"$msg successfully sent")
-    logger.debug("Done")
+    debug("Prepare sending")
+    info(s"$msg successfully sent")
+    debug("Done")
   }
 }
 
