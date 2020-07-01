@@ -6,6 +6,7 @@ import org.scalatest.wordspec.AnyWordSpecLike
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent._
+import scala.concurrent.duration._
 import scala.language.postfixOps
 
 class FuturesSpec extends AnyWordSpecLike with Matchers with BeforeAndAfterAll {
@@ -26,8 +27,9 @@ class FuturesSpec extends AnyWordSpecLike with Matchers with BeforeAndAfterAll {
     "1: calculate average conversion rate returned by all services" in {
       val testServices = Seq(serviceBankA, serviceBankB, serviceBankC)
       val (elapsed, result) = measure {
-        //TODO: implement
-        -1
+        val servicesFuture = testServices.map(_.rateUSD)
+        val res = Future.sequence(servicesFuture).map(seq => seq.sum / seq.length)
+        Await.result(res, 5 seconds)
       }
       elapsed should be(3000 +- 500)
       result should be((120 + 123 + 125) / 3)
@@ -35,7 +37,9 @@ class FuturesSpec extends AnyWordSpecLike with Matchers with BeforeAndAfterAll {
     "2. return first received conversion rate as String" in {
       val testServices = Seq(serviceBankA, serviceBankB, serviceBankC)
       val (elapsed, result) = measure {
-        //TODO: implement
+        val servicesFuture = testServices.map(_.rateUSD)
+        val res = Future.firstCompletedOf(servicesFuture).map(_.toString)
+        Await.result(res, 5 seconds)
         ""
       }
       elapsed should be(1000 +- 500)
@@ -45,16 +49,31 @@ class FuturesSpec extends AnyWordSpecLike with Matchers with BeforeAndAfterAll {
       val serviceBankD = new CurrencyService(120)(4000)
       val testServices = Seq(serviceBankA, serviceBankD)
       val (elapsed, result) = measureEither {
-        ???
+        val futures = testServices.map(_.rateUSD)
+        val promise = Promise[Int]
+        Future.firstCompletedOf(futures).foreach(value =>
+          promise.trySuccess(value))
+        scheduleOnce(2 seconds) {
+          promise.tryFailure(new Exception("timeout"))
+        }
+        Await.result(promise.future, 5 seconds)
       }
       elapsed should be(2000 +- 500)
       result.left.map(_.getMessage) should be(Left("timeout"))
     }
     "4. return all conversion rates sequentially using futures" in {
       val testServices = Seq(serviceBankA, serviceBankB, serviceBankC)
+
+      def recurse(services: Seq[CurrencyService]): Future[Seq[Int]] = services match {
+        case head :: tail => head.rateUSD.flatMap(res => recurse(tail).map(seq => res +: seq))
+        case Nil => Future(Seq())
+      }
+      def withRecurions = recurse(testServices)
+
+      def withFold = testServices.foldLeft(Future(Seq.empty[Int]))((cum, next) => cum.flatMap(v => next.rateUSD.map(v :+ _)))
       val (elapsed, result) = measure {
-        //TODO: implement
-        ""
+        Await.result(withRecurions, 8 seconds)
+        //        Await.result(withFold, 8 seconds)
       }
       elapsed should be(6000 +- 500)
       result should be(Seq(120, 123, 125))
